@@ -278,7 +278,7 @@ namespace Projekt.Extensions
                         Email = "tinopiskovic@mail.com",
                         Card = "Membership",
                         FirstName ="Tino",
-                        LastName = "Piskovic"
+                        LastName = "Piskovic",                 
                     },
 
                     new User()
@@ -287,7 +287,8 @@ namespace Projekt.Extensions
                         Email = "tinke@mail.com",
                         Card = "Membership",
                         FirstName ="Tinke",
-                        LastName = "Stuban"
+                        LastName = "Stuban",
+                        
                     },
 
                     new User()
@@ -296,7 +297,8 @@ namespace Projekt.Extensions
                         Email = "bkrajin@mail.com",
                         Card = "No-Membership",
                         FirstName ="Bruno",
-                        LastName = "Krajinovic"
+                        LastName = "Krajinovic",
+                        
                     },
 
                     new User()

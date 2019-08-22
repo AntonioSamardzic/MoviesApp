@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projekt;
 
 namespace Projekt.Migrations
 {
     [DbContext(typeof(ProjektContext))]
-    partial class ProjektContextModelSnapshot : ModelSnapshot
+    [Migration("20190813101606_FixCreatedAt")]
+    partial class FixCreatedAt
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,7 +49,7 @@ namespace Projekt.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 817, DateTimeKind.Utc).AddTicks(5759),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 305, DateTimeKind.Utc).AddTicks(5055),
                             FirstName = "Toby",
                             IsDeleted = false,
                             LastName = "guy"
@@ -55,7 +57,7 @@ namespace Projekt.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 817, DateTimeKind.Utc).AddTicks(8077),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 305, DateTimeKind.Utc).AddTicks(7579),
                             FirstName = "Viggo",
                             IsDeleted = false,
                             LastName = "Mortensen"
@@ -63,7 +65,7 @@ namespace Projekt.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 817, DateTimeKind.Utc).AddTicks(8098),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 305, DateTimeKind.Utc).AddTicks(7605),
                             FirstName = "Elijah",
                             IsDeleted = false,
                             LastName = "Wood"
@@ -71,7 +73,7 @@ namespace Projekt.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 817, DateTimeKind.Utc).AddTicks(8103),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 305, DateTimeKind.Utc).AddTicks(7610),
                             FirstName = "Sean",
                             IsDeleted = false,
                             LastName = "Bean"
@@ -79,7 +81,7 @@ namespace Projekt.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 817, DateTimeKind.Utc).AddTicks(8103),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 305, DateTimeKind.Utc).AddTicks(7610),
                             FirstName = "Orlando",
                             IsDeleted = false,
                             LastName = "Bloom"
@@ -120,7 +122,7 @@ namespace Projekt.Migrations
                         {
                             Id = 1,
                             BoughtDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 819, DateTimeKind.Utc).AddTicks(2994),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 307, DateTimeKind.Utc).AddTicks(3101),
                             IsDeleted = false,
                             MovieId = 1,
                             Price = 159.99m,
@@ -130,7 +132,7 @@ namespace Projekt.Migrations
                         {
                             Id = 2,
                             BoughtDate = new DateTime(2018, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 820, DateTimeKind.Utc).AddTicks(5151),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 308, DateTimeKind.Utc).AddTicks(5884),
                             IsDeleted = false,
                             MovieId = 2,
                             Price = 159.99m,
@@ -140,7 +142,7 @@ namespace Projekt.Migrations
                         {
                             Id = 3,
                             BoughtDate = new DateTime(2015, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 820, DateTimeKind.Utc).AddTicks(5223),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 308, DateTimeKind.Utc).AddTicks(5961),
                             IsDeleted = false,
                             MovieId = 3,
                             Price = 59.99m,
@@ -150,7 +152,7 @@ namespace Projekt.Migrations
                         {
                             Id = 4,
                             BoughtDate = new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 820, DateTimeKind.Utc).AddTicks(5249),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 308, DateTimeKind.Utc).AddTicks(5981),
                             IsDeleted = false,
                             MovieId = 4,
                             Price = 9.99m,
@@ -187,7 +189,7 @@ namespace Projekt.Migrations
                         {
                             Id = 1,
                             Address = "Pres CA",
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 821, DateTimeKind.Utc).AddTicks(4831),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 309, DateTimeKind.Utc).AddTicks(6189),
                             IsDeleted = false,
                             Name = "Presidental",
                             PhoneNumber = "09809768",
@@ -197,7 +199,7 @@ namespace Projekt.Migrations
                         {
                             Id = 2,
                             Address = "WB CA",
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 821, DateTimeKind.Utc).AddTicks(7472),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 309, DateTimeKind.Utc).AddTicks(9026),
                             IsDeleted = false,
                             Name = "Warner Bros",
                             PhoneNumber = "09509768",
@@ -207,7 +209,7 @@ namespace Projekt.Migrations
                         {
                             Id = 3,
                             Address = "Uni CA",
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 821, DateTimeKind.Utc).AddTicks(7498),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 309, DateTimeKind.Utc).AddTicks(9052),
                             IsDeleted = false,
                             Name = "Universal",
                             PhoneNumber = "0209768",
@@ -217,7 +219,7 @@ namespace Projekt.Migrations
                         {
                             Id = 4,
                             Address = "WD CA",
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 821, DateTimeKind.Utc).AddTicks(7498),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 309, DateTimeKind.Utc).AddTicks(9057),
                             IsDeleted = false,
                             Name = "Walt Disney",
                             PhoneNumber = "009768",
@@ -261,7 +263,7 @@ namespace Projekt.Migrations
                         {
                             Id = 1,
                             ActorId = 1,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 823, DateTimeKind.Utc).AddTicks(45),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 311, DateTimeKind.Utc).AddTicks(2614),
                             Ended = new DateTime(2003, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fee = 4999999.99m,
                             IsDeleted = false,
@@ -272,7 +274,7 @@ namespace Projekt.Migrations
                         {
                             Id = 2,
                             ActorId = 2,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 823, DateTimeKind.Utc).AddTicks(3564),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 311, DateTimeKind.Utc).AddTicks(6400),
                             Ended = new DateTime(2015, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fee = 29999.99m,
                             IsDeleted = false,
@@ -283,7 +285,7 @@ namespace Projekt.Migrations
                         {
                             Id = 3,
                             ActorId = 3,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 823, DateTimeKind.Utc).AddTicks(3651),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 311, DateTimeKind.Utc).AddTicks(6487),
                             Ended = new DateTime(2014, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fee = 559999.99m,
                             IsDeleted = false,
@@ -294,7 +296,7 @@ namespace Projekt.Migrations
                         {
                             Id = 4,
                             ActorId = 4,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 823, DateTimeKind.Utc).AddTicks(3682),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 311, DateTimeKind.Utc).AddTicks(6518),
                             Ended = new DateTime(2012, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fee = 499999.99m,
                             IsDeleted = false,
@@ -344,7 +346,7 @@ namespace Projekt.Migrations
                         {
                             Id = 1,
                             CompanyId = 1,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 825, DateTimeKind.Utc).AddTicks(1052),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 313, DateTimeKind.Utc).AddTicks(491),
                             Description = "Kum (eng. The Godfather) je kriminalistička drama Francisa Forda Coppole temeljena na istoimenom romanu Maria Puza. U glavnim ulogama pojavljuju se Marlon Brando, Al Pacino, Robert Duvall, Diane Keaton i James Caan. Radnja filma proteže se na deset godina od kraja 1945. do 1955. te predstavlja kronologiju mafijaške obitelji Corleone.",
                             IsDeleted = false,
                             MovieTypeId = 1,
@@ -357,7 +359,7 @@ namespace Projekt.Migrations
                         {
                             Id = 2,
                             CompanyId = 2,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 825, DateTimeKind.Utc).AddTicks(6258),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 313, DateTimeKind.Utc).AddTicks(5087),
                             Description = "Best movie ever",
                             IsDeleted = false,
                             MovieTypeId = 2,
@@ -370,7 +372,7 @@ namespace Projekt.Migrations
                         {
                             Id = 3,
                             CompanyId = 3,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 825, DateTimeKind.Utc).AddTicks(6335),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 313, DateTimeKind.Utc).AddTicks(5164),
                             Description = "mind fuck movie",
                             IsDeleted = false,
                             MovieTypeId = 2,
@@ -383,7 +385,7 @@ namespace Projekt.Migrations
                         {
                             Id = 4,
                             CompanyId = 4,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 825, DateTimeKind.Utc).AddTicks(6361),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 313, DateTimeKind.Utc).AddTicks(5185),
                             Description = "funny movie",
                             IsDeleted = false,
                             MovieTypeId = 5,
@@ -417,35 +419,35 @@ namespace Projekt.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 826, DateTimeKind.Utc).AddTicks(4948),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 314, DateTimeKind.Utc).AddTicks(2366),
                             Genre = "Action",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 826, DateTimeKind.Utc).AddTicks(5620),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 314, DateTimeKind.Utc).AddTicks(3038),
                             Genre = "Fantasy",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 826, DateTimeKind.Utc).AddTicks(5630),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 314, DateTimeKind.Utc).AddTicks(3043),
                             Genre = "Drama",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 826, DateTimeKind.Utc).AddTicks(5630),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 314, DateTimeKind.Utc).AddTicks(3048),
                             Genre = "Documentary",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 826, DateTimeKind.Utc).AddTicks(5635),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 314, DateTimeKind.Utc).AddTicks(3048),
                             Genre = "Comedy",
                             IsDeleted = false
                         });
@@ -485,7 +487,7 @@ namespace Projekt.Migrations
                         {
                             Id = 1,
                             Card = "Membership",
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 827, DateTimeKind.Utc).AddTicks(5232),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 315, DateTimeKind.Utc).AddTicks(2435),
                             Email = "tinopiskovic@mail.com",
                             FirstName = "Tino",
                             IsDeleted = false,
@@ -495,7 +497,7 @@ namespace Projekt.Migrations
                         {
                             Id = 2,
                             Card = "Membership",
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 827, DateTimeKind.Utc).AddTicks(7802),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 315, DateTimeKind.Utc).AddTicks(4964),
                             Email = "tinke@mail.com",
                             FirstName = "Tinke",
                             IsDeleted = false,
@@ -505,7 +507,7 @@ namespace Projekt.Migrations
                         {
                             Id = 3,
                             Card = "No-Membership",
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 827, DateTimeKind.Utc).AddTicks(7823),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 315, DateTimeKind.Utc).AddTicks(4990),
                             Email = "bkrajin@mail.com",
                             FirstName = "Bruno",
                             IsDeleted = false,
@@ -515,7 +517,7 @@ namespace Projekt.Migrations
                         {
                             Id = 4,
                             Card = "Membership",
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 827, DateTimeKind.Utc).AddTicks(7828),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 315, DateTimeKind.Utc).AddTicks(4990),
                             Email = "stelasipusic@mail.com",
                             FirstName = "Stela",
                             IsDeleted = false,
@@ -525,7 +527,7 @@ namespace Projekt.Migrations
                         {
                             Id = 5,
                             Card = "Membership",
-                            CreatedAt = new DateTime(2019, 8, 13, 10, 40, 12, 827, DateTimeKind.Utc).AddTicks(7828),
+                            CreatedAt = new DateTime(2019, 8, 13, 10, 16, 5, 315, DateTimeKind.Utc).AddTicks(4995),
                             Email = "antoniosamardzic@mail.com",
                             FirstName = "Antonio",
                             IsDeleted = false,

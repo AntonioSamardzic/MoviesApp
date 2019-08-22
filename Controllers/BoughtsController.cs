@@ -25,7 +25,10 @@ namespace Projekt.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Bought>>> GetBoughts()
         {
-            return await _context.Boughts.ToListAsync();
+           return await _context.Boughts
+      .Include(w => w.User)
+.Include(a=>a.Movie)
+   .ToListAsync();
         }
 
 

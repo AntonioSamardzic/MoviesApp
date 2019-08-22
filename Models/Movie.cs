@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Projekt.Models
 {
@@ -25,6 +26,7 @@ namespace Projekt.Models
         public string Description {get;set;}
 
         public ICollection<Bought> Boughts {get; set;}
+        [JsonIgnore]
         public ICollection<Engagement> Engagements {get; set;}
     }
 }

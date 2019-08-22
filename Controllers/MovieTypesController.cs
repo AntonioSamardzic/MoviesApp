@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Projekt.Controllers
 {
-    [Route("api/movietype")]
+    [Route("api/movietypes")]
     [ApiController]
     public class MovieTypesController : ControllerBase
     {

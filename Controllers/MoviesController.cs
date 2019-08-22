@@ -26,7 +26,10 @@ namespace Projekt.Controllers
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Models.Movie>>> GetEngagements()
     {
-        return await _context.Movies.ToListAsync();
+             return await _context.Movies
+      .Include(w => w.Company)
+.Include(a=>a.MovieType)
+   .ToListAsync();
     }
 
 
