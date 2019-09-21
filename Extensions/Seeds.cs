@@ -14,6 +14,7 @@ namespace Projekt.Extensions
             Engagements(modelBuilder);
             Movies(modelBuilder);
             MovieTypes(modelBuilder);
+            
             Users(modelBuilder);
         }
 
@@ -25,6 +26,7 @@ namespace Projekt.Extensions
                 Id = 1,
                 FirstName = "Toby",
                 LastName = "guy"
+                
 
             },
             new Actor()
@@ -272,51 +274,76 @@ namespace Projekt.Extensions
 
             public static void Users(ModelBuilder modelBuilder)
             {
-                modelBuilder.Entity<User>().HasData(new User()
+                modelBuilder.Entity<AuthUser>().HasData(new AuthUser()
                     {
                         Id=1,
                         Email = "tinopiskovic@mail.com",
                         Card = "Membership",
                         FirstName ="Tino",
-                        LastName = "Piskovic",                 
+                        LastName = "Piskovic",
+                        TwoFactorEnabled = false  ,
+                        PhoneNumberConfirmed = false,
+                        EmailConfirmed = false,
+                        LockoutEnabled = false,
+                        AccessFailedCount = 0         
                     },
 
-                    new User()
+                    new AuthUser()
                     {
                         Id=2,
                         Email = "tinke@mail.com",
                         Card = "Membership",
                         FirstName ="Tinke",
                         LastName = "Stuban",
+                        TwoFactorEnabled = false  ,
+                        PhoneNumberConfirmed = false,
+                        EmailConfirmed = false,
+                        LockoutEnabled = false,
+                        AccessFailedCount = 0    
                         
                     },
 
-                    new User()
+                    new AuthUser()
                     {
                         Id=3,
                         Email = "bkrajin@mail.com",
                         Card = "No-Membership",
                         FirstName ="Bruno",
                         LastName = "Krajinovic",
+                        TwoFactorEnabled = false  ,
+                        PhoneNumberConfirmed = false,
+                        EmailConfirmed = false,
+                        LockoutEnabled = false,
+                        AccessFailedCount = 0    
                         
                     },
 
-                    new User()
+                    new AuthUser()
                     {
                         Id=4,
                         Email = "stelasipusic@mail.com",
                         Card = "Membership",
                         FirstName ="Stela",
-                        LastName = "Sipusic"
+                        LastName = "Sipusic",
+                        TwoFactorEnabled = false  ,
+                        PhoneNumberConfirmed = false,
+                        EmailConfirmed = false,
+                        LockoutEnabled = false,
+                        AccessFailedCount = 0    
                     },
 
-                    new User()
+                    new AuthUser()
                     {
                         Id=5,
                         Email = "antoniosamardzic@mail.com",
                         Card = "Membership",
                         FirstName ="Antonio",
-                        LastName = "Samardzic"
+                        LastName = "Samardzic",
+                        TwoFactorEnabled = false  ,
+                        PhoneNumberConfirmed = false,
+                        EmailConfirmed = false,
+                        LockoutEnabled = false,
+                        AccessFailedCount = 0   
                     }
                 );
     

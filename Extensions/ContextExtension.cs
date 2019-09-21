@@ -1,6 +1,6 @@
 namespace Projekt.Extensions
 {
-    public class ContextExtension
+    public static class ContextExtension
     {
         
     }

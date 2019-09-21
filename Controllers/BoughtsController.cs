@@ -5,6 +5,7 @@ using Projekt.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Projekt;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Projekt.Controllers
 {
@@ -21,7 +22,7 @@ namespace Projekt.Controllers
 
            
         }
-
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Bought>>> GetBoughts()
         {

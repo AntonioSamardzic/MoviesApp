@@ -1,15 +1,12 @@
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 
 namespace Projekt.Models
 {
-    public class User:BaseModel
+    public class AuthUser : IdentityUser<int>
     {
-        
-        
-        public string Email { get; set; }
-        
-        [Required(ErrorMessage="Ovo polje je obavezno")]
+         [Required(ErrorMessage="Ovo polje je obavezno")]
         public string Card { get; set; }
 
         [Required(ErrorMessage="Ovo polje je obavezno")]
@@ -23,4 +20,5 @@ namespace Projekt.Models
        
         public ICollection<Bought> Boughts {get; set;}
     }
+    
 }

@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System;
 using Projekt.Models.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Projekt.Controllers
 {
@@ -20,7 +21,7 @@ namespace Projekt.Controllers
             _context = context;
         }
 
-
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Engagement>>> GetEngagements()
         {

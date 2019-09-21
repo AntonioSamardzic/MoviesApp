@@ -1,12 +1,12 @@
-using System.Threading;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Projekt.Extensions;
 using Projekt.Models;
 
 namespace Projekt
 {
-    public class ProjektContext : DbContext
+    public class ProjektContext : IdentityDbContext<AuthUser, IdentityRole<int>, int>
     {
         public ProjektContext(DbContextOptions<ProjektContext> options) : base(options)
         {
@@ -18,7 +18,6 @@ namespace Projekt
         public DbSet<Company> Companies { get; set; }
         public DbSet<Engagement> Engagements { get; set; }
         public DbSet<MovieType> MovieTypes { get; set; }
-        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,7 +29,7 @@ namespace Projekt
                     .HasForeignKey(sc => sc.MovieId);
 
             modelBuilder.Entity<Bought>()
-                    .HasOne<User>(sc => sc.User)
+                    .HasOne<AuthUser>(sc => sc.User)
                     .WithMany(s => s.Boughts)
                     .HasForeignKey(sc => sc.UserId);
 
@@ -44,6 +43,7 @@ namespace Projekt
                     .WithMany(s => s.Engagements)
                     .HasForeignKey(sc => sc.MovieId);
 
+                base.OnModelCreating(modelBuilder);
         }
         
     }

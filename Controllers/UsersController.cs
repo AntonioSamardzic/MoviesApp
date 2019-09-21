@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Projekt.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Projekt.Controllers
 {
@@ -22,9 +23,9 @@ namespace Projekt.Controllers
          
         }    
 
-    
+    [Authorize]
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+    public async Task<ActionResult<IEnumerable<AuthUser>>> GetUsers()
     {
         return await _context.Users.ToListAsync();
     }
@@ -32,7 +33,7 @@ namespace Projekt.Controllers
 
 // GET api/Todo/5
 [HttpGet("{id}")]
-public async Task<ActionResult<User>> GetUser(int id)
+public async Task<ActionResult<AuthUser>> GetUser(int id)
 {
     var user =await _context.Users.FindAsync(id);
     if(user == null)
@@ -42,7 +43,7 @@ public async Task<ActionResult<User>> GetUser(int id)
     return user;
 }
 [HttpPost]
-public async Task<IActionResult> PostUser (User item)
+public async Task<IActionResult> PostUser (AuthUser item)
 {
     _context.Users.Add(item);
     await _context.SaveChangesAsync();
@@ -50,7 +51,7 @@ public async Task<IActionResult> PostUser (User item)
 }
 
 [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(long id, User item)
+        public async Task<IActionResult> PutUser(long id, AuthUser item)
         {
             if (id != item.Id)
             {

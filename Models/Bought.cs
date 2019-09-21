@@ -13,7 +13,7 @@ namespace Projekt.Models
         public decimal Price { get; set; }
         [Required(ErrorMessage="Ovo polje je obavezno")]
         public int UserId { get; set; }
-        public User User {get; set;}
+        public AuthUser User {get; set;}
         [Required(ErrorMessage="Ovo polje je obavezno")]
         public int MovieId {get;set;}
         public Movie Movie {get; set;}
